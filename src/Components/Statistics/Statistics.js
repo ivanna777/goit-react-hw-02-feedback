@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styles from "./Statistics.module.css"
 
 class Statistics extends Component {
     render() {
@@ -7,23 +8,23 @@ class Statistics extends Component {
         return (
             <div>
                 <div>
-                    <span>Good</span>
+                    <span className={styles["feedback-type"]}>Good: </span>
                     <span>{good}</span>
                 </div>
                 <div>
-                    <span>Neutral</span>
+                    <span className={styles["feedback-type"]}>Neutral: </span>
                     <span>{neutral}</span>
                 </div>
                 <div>
-                    <span>Bad</span>
+                    <span className={styles["feedback-type"]}>Bad: </span>
                     <span>{bad}</span>
                 </div>
                 <div>
-                    <span>Total</span>
+                    <span className={styles["feedback-type"]}>Total: </span>
                     <span>{total}</span>
                 </div>
                 <div>
-                    <span>Positive feedback</span>
+                    <span className={styles["feedback-type"]}>Positive feedback: </span>
                     <span>{positivePercentage} %</span>
                 </div>
             </div >
